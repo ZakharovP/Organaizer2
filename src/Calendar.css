@@ -1,0 +1,128 @@
+.calendar {
+  background: #98fadd;
+  padding: 20px;
+  border: 1px solid black;
+  display: inline-block;
+  width: 700px;
+}
+
+.calendar > .header {
+  width: 300px;
+  height: 40px;
+  background-color: #7fdaeb;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.calendar > .header .title {
+  display: inline-block;
+  width: 200px;
+}
+
+
+.calendar > .body {
+  margin-top: 20px;
+}
+
+.calendar > .body .weekday {
+  display: inline-block;
+  width: 50px;
+  height: 20px;
+  line-height: 20px;
+  border: 1px solid blue;
+}
+
+.calendar > .body > .row {
+  min-height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar > .body > .row > .cell {
+  display: block;
+  width: 50px;
+  max-height: 50px;
+  min-height: 50px;
+  border: 1px solid gray;
+  line-height: 50px;
+  cursor: pointer;
+}
+
+.calendar > .body > .row > .cell:hover {
+  color: white;
+}
+
+.calendar > .body > .row > .cell.selected {
+  color: blue !important;
+  border-color: blue;
+}
+
+.calendar > .body > .row > .cell.done {
+  color: black;
+  background: #33ff33;
+}
+
+.calendar > .body > .row > .cell.not-done {
+  color: orange;
+  background: red;
+}
+
+
+.calendar .tasks {
+  background-color: #f8f8f8;
+  border: 1px solid blue;
+  margin-top: 50px;
+}
+
+.calendar .tasks .control {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.calendar .tasks .control input {
+  flex: 1;
+}
+
+.calendar .tasks .control button {
+  cursor: pointer;
+}
+
+.calendar .tasks .task {
+  margin: 20px;
+  text-align: left;
+  padding-left: 15px;
+  overflow-x: visible;
+  white-space: nowrap;
+}
+
+.calendar .tasks span.task-text {
+  display: inline-block;
+  width: 400px;
+  word-wrap: break-word;
+}
+
+.calendar .tasks input.task-text {
+  width: 400px;
+  box-sizing: border-box;
+}
+
+.calendar .tasks .task button {
+  margin-left: 10px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.calendar .tasks .task .done {
+  font-size: 10px;
+  display: inline-block;
+  margin-left: 11px;
+  color: blue;
+}
